@@ -23,16 +23,9 @@ const Header = () => {
         dispatch(setModalOpen(!isModal));
 
     }
-    // useEffect(() => {
-    //     for (let i = 1; i <= 5; i++) {
-    //         setTimeout(() => {
-    //             console.log(i);
-    //         }, 2000)
-    //     }
-    // }, [])
+
 
     const handleSearch = (event) => {
-        console.log("20");
         const movieSearch = event.target.value;
         setSearchValue(movieSearch);
         if (movieSearch) {

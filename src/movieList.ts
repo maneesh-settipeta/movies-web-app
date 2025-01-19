@@ -5,6 +5,6 @@ export const movies :string[]= [
     "Pushpa 2: The Rule",
     "Mufasa: The Lion King",
     "Marco",
-    "Quotation Gang Part 1"
+    "Quotation Gang Part 1",
   ]
   

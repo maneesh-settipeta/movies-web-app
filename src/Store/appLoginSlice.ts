@@ -1,13 +1,13 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 
-interface AppLoginState {
+interface AppLoginTypes {
     isUserLoggedIn:boolean,
     isCitySelected:string,
     isModalOpen:boolean,
 }
 
-const initialState :AppLoginState={
+const initialState :AppLoginTypes={
     isUserLoggedIn:false,
     isCitySelected:"",
     isModalOpen:false,
