@@ -44,8 +44,6 @@ const TheatreSeating = () => {
     });
     console.log(data);
 
-
-
     const details = data?.data?.showDetails;
     const seatDetails = data?.data?.seatDetails
 

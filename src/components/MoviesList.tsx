@@ -51,10 +51,10 @@ const MoviesList = () => {
             <div className="flex justify-center ">
                 {moviesListBasedOnCities?.map(([id]) => (
 
-                    <button key={id} className="h-64 w-40 border  m-3 rounded-lg text-center  border-red-400"
+                    <button key={id} className="h-64 w-40   m-3 rounded-lg text-center  "
                         onClick={() => handleShowShows(Number(id))}
                     >
-                        <img src={imagesMap.get(id)} className="h-max w-fit" />
+                        <img src={imagesMap.get(id)} className="h-fit w-fit" />
                         {/* <h1 className="font-bold text-1xl">{eachMovie}</h1> */}
                     </button>
                 ))}
