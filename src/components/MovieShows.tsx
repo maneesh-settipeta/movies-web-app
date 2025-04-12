@@ -1,12 +1,28 @@
 import { useEffect, useState } from 'react';
-import movieData from '../data.json'
 import MovieShowDates from './MovieShowDates'
 import Theatres from './Theatres';
 import { useDispatch } from 'react-redux';
 import { setMoviesData } from '../Store/appMoviesSlice';
+import { useLocation } from 'react-router-dom';
+import { baseURL } from '../URL';
 
 const MovieShows = () => {
+
     const dispatch = useDispatch();
+
+    const [movieData, setmovieData] = useState([]);
+
+    // const movieId = useSelector((state) => state?.appMovie?.selectedMovieId);
+    // const cityId = useSelector((state) => state?.appLogin?.city?.cityId);
+
+    const location = useLocation();
+    const URL = location.pathname.split('/');
+
+    const movieId = URL[3];
+    const cityId = URL[5];
+
+
+    const SHOWS_API = `${baseURL}:8765/search-service/api/v2/shows/search?movieId=${movieId}&theaterCityId=${cityId}`;
 
     useEffect(() => {
         function sortShowTimings(showTimes) {
@@ -18,13 +34,22 @@ const MovieShows = () => {
                 });
             return Object.fromEntries(sortedShowTimes);
         }
+        const fetchApiData = async () => {
+            try {
+                const res = await fetch(SHOWS_API);
+                const result = await res.json();
+                setmovieData(result);
+                parseData(result);
+            } catch (error) {
+                console.error(error, "Error")
+            }
+        }
 
-        function parseData() {
+        function parseData(movieData1) {
             const groupedByDate = {};
-            movieData?.theaterShows?.map((theater) => {
+            movieData1?.theaterShows?.map((theater) => {
                 Object.entries(theater?.showTimes)?.forEach(([date, times]) => {
                     if (!groupedByDate[date]) {
-
                         groupedByDate[date] = [];
                     }
                     groupedByDate[date].push({
@@ -34,16 +59,15 @@ const MovieShows = () => {
                     });
                 });
             });
-            console.log(groupedByDate, "group");
-
             dispatch(setMoviesData(groupedByDate));
         }
-        parseData();
+        fetchApiData();
+
     }, []);
 
     return (
         <div>
-            <div className='bg-gray-200 flex p-4 gap-4 pl-36'>
+            <div className='  bg-gray-200 flex p-4 gap-4 pl-36'>
                 <p>Movies</p>
                 <p>Stream</p>
                 <p>Events</p>
@@ -51,11 +75,13 @@ const MovieShows = () => {
                 <p>Sports</p>
                 <p>Activities</p>
             </div>
-            <div className='h-36 w-full border border-b-2 flex items-center pl-36'>
-                <h1 className='text-4xl '>{movieData.movieName} </h1>
+            <div className=' w-full h-20 border flex items-center pl-36'>
+                <h1 className='text-4xl '>{movieData?.movieName} </h1>
             </div>
-            <div>
+            <div className='h-24 mb-1'>
                 <MovieShowDates />
+            </div>
+            <div >
                 <Theatres />
             </div>
         </div>

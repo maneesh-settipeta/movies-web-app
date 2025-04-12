@@ -1,0 +1,38 @@
+// {
+// "data":
+// {
+//     "movieId":201,
+//     "movieName":"Pushpa 2: The Rule",
+//     "theaterCity":"Hyderabad",
+//     "theaterShows":[
+//         {
+//             "theaterId":301,
+//             "theaterName":"AMB Cinemas: Gachibowli",
+//             "showTimes":{
+//                 "2025-01-08":{
+//                     "21:50":503,
+//                     "10:00":501,
+//                     "14:00":502
+//                 }
+//             }
+//         },
+//         {
+//             "theaterId":302,
+//             "theaterName":"INOX: GVK One, Banjara Hills",
+//             "showTimes":{
+//                 "2025-01-09":{
+//                     "12:55":521
+//                 },
+//                 "2025-01-08":{
+//                     "18:10":500
+//                 },
+//                 "2025-01-07":{
+//                     "21:50":519,
+//                     "10:00":517,
+//                     "14:00":518
+//                 }
+//             }
+//         }
+//     ]
+// }
+// }

@@ -1,0 +1,1181 @@
+{
+  "ResponseBodySeats": {
+    "showDetails": {
+      "movieId": 201,
+      "movieName": "Pushpa 2: The Rule",
+      "theaterId": 301,
+      "theaterName": "AMB Cinemas: Gachibowli",
+      "showId": 502,
+      "showTime": "14:00",
+      "showDate": "2025-01-07"
+    },
+    "seatDetails": {
+      "A": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 641,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "BOOKED",
+          "showseatId": 642,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 643,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 644,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "AVAILABLE",
+          "showseatId": 645,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 646,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "BOOKED",
+          "showseatId": 647,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 648,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 649,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 650,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "AVAILABLE",
+          "showseatId": 651,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 652,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "BOOKED",
+          "showseatId": 653,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "BOOKED",
+          "showseatId": 654,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "PENDING",
+          "showseatId": 655,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "AVAILABLE",
+          "showseatId": 656,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "BOOKED",
+          "showseatId": 657,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "AVAILABLE",
+          "showseatId": 658,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "BOOKED",
+          "showseatId": 659,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 660,
+          "showseatTicketcost": 10
+        }
+      },
+      "B": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 661,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "AVAILABLE",
+          "showseatId": 662,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "AVAILABLE",
+          "showseatId": 663,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "PENDING",
+          "showseatId": 664,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 665,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 666,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "AVAILABLE",
+          "showseatId": 667,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 668,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "BOOKED",
+          "showseatId": 669,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "AVAILABLE",
+          "showseatId": 670,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "PENDING",
+          "showseatId": 671,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 672,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "BOOKED",
+          "showseatId": 673,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "AVAILABLE",
+          "showseatId": 674,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "PENDING",
+          "showseatId": 675,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 676,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 677,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "BOOKED",
+          "showseatId": 678,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "AVAILABLE",
+          "showseatId": 679,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 680,
+          "showseatTicketcost": 10
+        }
+      },
+      "C": {
+        "1": {
+          "status": "AVAILABLE",
+          "showseatId": 681,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "BOOKED",
+          "showseatId": 682,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 683,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 684,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 685,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 686,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "BOOKED",
+          "showseatId": 687,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "AVAILABLE",
+          "showseatId": 688,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "PENDING",
+          "showseatId": 689,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "BOOKED",
+          "showseatId": 690,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "AVAILABLE",
+          "showseatId": 691,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 692,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "BOOKED",
+          "showseatId": 693,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "PENDING",
+          "showseatId": 694,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "BOOKED",
+          "showseatId": 695,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "AVAILABLE",
+          "showseatId": 696,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "BOOKED",
+          "showseatId": 697,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "AVAILABLE",
+          "showseatId": 698,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "PENDING",
+          "showseatId": 699,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "BOOKED",
+          "showseatId": 700,
+          "showseatTicketcost": 10
+        }
+      },
+      "D": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 701,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "AVAILABLE",
+          "showseatId": 702,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 703,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "BOOKED",
+          "showseatId": 704,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "AVAILABLE",
+          "showseatId": 705,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "BOOKED",
+          "showseatId": 706,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "AVAILABLE",
+          "showseatId": 707,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 708,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 709,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 710,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "BOOKED",
+          "showseatId": 711,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 712,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 713,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "BOOKED",
+          "showseatId": 714,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "AVAILABLE",
+          "showseatId": 715,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 716,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 717,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "BOOKED",
+          "showseatId": 718,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "PENDING",
+          "showseatId": 719,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 720,
+          "showseatTicketcost": 10
+        }
+      },
+      "E": {
+        "1": {
+          "status": "AVAILABLE",
+          "showseatId": 721,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "BOOKED",
+          "showseatId": 722,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 723,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 724,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 725,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 726,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "PENDING",
+          "showseatId": 727,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 728,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 729,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 730,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "BOOKED",
+          "showseatId": 731,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 732,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 733,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "BOOKED",
+          "showseatId": 734,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "AVAILABLE",
+          "showseatId": 735,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 736,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "PENDING",
+          "showseatId": 737,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "AVAILABLE",
+          "showseatId": 738,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "BOOKED",
+          "showseatId": 739,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 740,
+          "showseatTicketcost": 10
+        }
+      },
+      "F": {
+        "1": {
+          "status": "AVAILABLE",
+          "showseatId": 741,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "BOOKED",
+          "showseatId": 742,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 743,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 744,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 745,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 746,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "PENDING",
+          "showseatId": 747,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 748,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 749,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 750,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "BOOKED",
+          "showseatId": 751,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 752,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 753,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "BOOKED",
+          "showseatId": 754,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "AVAILABLE",
+          "showseatId": 755,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 756,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "PENDING",
+          "showseatId": 757,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "AVAILABLE",
+          "showseatId": 758,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "BOOKED",
+          "showseatId": 759,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 760,
+          "showseatTicketcost": 10
+        }
+      },
+      "G": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 761,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "PENDING",
+          "showseatId": 762,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "AVAILABLE",
+          "showseatId": 763,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "BOOKED",
+          "showseatId": 764,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "AVAILABLE",
+          "showseatId": 765,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "BOOKED",
+          "showseatId": 766,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "PENDING",
+          "showseatId": 767,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "AVAILABLE",
+          "showseatId": 768,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "BOOKED",
+          "showseatId": 769,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 770,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "AVAILABLE",
+          "showseatId": 771,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "BOOKED",
+          "showseatId": 772,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 773,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "AVAILABLE",
+          "showseatId": 774,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "BOOKED",
+          "showseatId": 775,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "PENDING",
+          "showseatId": 776,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 777,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "BOOKED",
+          "showseatId": 778,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "PENDING",
+          "showseatId": 779,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 780,
+          "showseatTicketcost": 10
+        }
+      },
+      "H": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 781,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "PENDING",
+          "showseatId": 782,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "AVAILABLE",
+          "showseatId": 783,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "BOOKED",
+          "showseatId": 784,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "AVAILABLE",
+          "showseatId": 785,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "BOOKED",
+          "showseatId": 786,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "PENDING",
+          "showseatId": 787,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "AVAILABLE",
+          "showseatId": 788,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "BOOKED",
+          "showseatId": 789,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "PENDING",
+          "showseatId": 790,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "AVAILABLE",
+          "showseatId": 791,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "BOOKED",
+          "showseatId": 792,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 793,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "AVAILABLE",
+          "showseatId": 794,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "BOOKED",
+          "showseatId": 795,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "PENDING",
+          "showseatId": 796,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 797,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "BOOKED",
+          "showseatId": 798,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "PENDING",
+          "showseatId": 799,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "AVAILABLE",
+          "showseatId": 800,
+          "showseatTicketcost": 10
+        }
+      },
+      "I": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 801,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "AVAILABLE",
+          "showseatId": 802,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 803,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 804,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 805,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 806,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "BOOKED",
+          "showseatId": 807,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "PENDING",
+          "showseatId": 808,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 809,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "BOOKED",
+          "showseatId": 810,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "PENDING",
+          "showseatId": 811,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 812,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "BOOKED",
+          "showseatId": 813,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "PENDING",
+          "showseatId": 814,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "AVAILABLE",
+          "showseatId": 815,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 816,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 817,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "PENDING",
+          "showseatId": 818,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "AVAILABLE",
+          "showseatId": 819,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "BOOKED",
+          "showseatId": 820,
+          "showseatTicketcost": 10
+        }
+      },
+      "J": {
+        "1": {
+          "status": "BOOKED",
+          "showseatId": 821,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "AVAILABLE",
+          "showseatId": 822,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "PENDING",
+          "showseatId": 823,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 824,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "BOOKED",
+          "showseatId": 825,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "AVAILABLE",
+          "showseatId": 826,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "BOOKED",
+          "showseatId": 827,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "PENDING",
+          "showseatId": 828,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "AVAILABLE",
+          "showseatId": 829,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "BOOKED",
+          "showseatId": 830,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "PENDING",
+          "showseatId": 831,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 832,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "BOOKED",
+          "showseatId": 833,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "PENDING",
+          "showseatId": 834,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "AVAILABLE",
+          "showseatId": 835,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "BOOKED",
+          "showseatId": 836,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "AVAILABLE",
+          "showseatId": 837,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "PENDING",
+          "showseatId": 838,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "AVAILABLE",
+          "showseatId": 839,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "BOOKED",
+          "showseatId": 840,
+          "showseatTicketcost": 10
+        }
+      },
+      "K": {
+        "1": {
+          "status": "AVAILABLE",
+          "showseatId": 841,
+          "showseatTicketcost": 10
+        },
+        "2": {
+          "status": "PENDING",
+          "showseatId": 842,
+          "showseatTicketcost": 10
+        },
+        "3": {
+          "status": "BOOKED",
+          "showseatId": 843,
+          "showseatTicketcost": 10
+        },
+        "4": {
+          "status": "AVAILABLE",
+          "showseatId": 844,
+          "showseatTicketcost": 10
+        },
+        "5": {
+          "status": "PENDING",
+          "showseatId": 845,
+          "showseatTicketcost": 10
+        },
+        "6": {
+          "status": "BOOKED",
+          "showseatId": 846,
+          "showseatTicketcost": 10
+        },
+        "7": {
+          "status": "AVAILABLE",
+          "showseatId": 847,
+          "showseatTicketcost": 10
+        },
+        "8": {
+          "status": "BOOKED",
+          "showseatId": 848,
+          "showseatTicketcost": 10
+        },
+        "9": {
+          "status": "PENDING",
+          "showseatId": 849,
+          "showseatTicketcost": 10
+        },
+        "10": {
+          "status": "AVAILABLE",
+          "showseatId": 850,
+          "showseatTicketcost": 10
+        },
+        "11": {
+          "status": "BOOKED",
+          "showseatId": 851,
+          "showseatTicketcost": 10
+        },
+        "12": {
+          "status": "AVAILABLE",
+          "showseatId": 852,
+          "showseatTicketcost": 10
+        },
+        "13": {
+          "status": "PENDING",
+          "showseatId": 853,
+          "showseatTicketcost": 10
+        },
+        "14": {
+          "status": "AVAILABLE",
+          "showseatId": 854,
+          "showseatTicketcost": 10
+        },
+        "15": {
+          "status": "BOOKED",
+          "showseatId": 855,
+          "showseatTicketcost": 10
+        },
+        "16": {
+          "status": "AVAILABLE",
+          "showseatId": 856,
+          "showseatTicketcost": 10
+        },
+        "17": {
+          "status": "PENDING",
+          "showseatId": 857,
+          "showseatTicketcost": 10
+        },
+        "18": {
+          "status": "BOOKED",
+          "showseatId": 858,
+          "showseatTicketcost": 10
+        },
+        "19": {
+          "status": "AVAILABLE",
+          "showseatId": 859,
+          "showseatTicketcost": 10
+        },
+        "20": {
+          "status": "PENDING",
+          "showseatId": 860,
+          "showseatTicketcost": 10
+        }
+      }
+    }
+  },
+  "data": {
+    "movieId": 201,
+    "movieName": "Pushpa 2: The Rule",
+    "theaterCity": "Hyderabad",
+    "theaterShows": [
+      {
+        "theaterId": 301,
+        "theaterName": "AMB Cinemas: Gachibowli",
+        "showTimes": {
+          "2025-01-08": {
+            "21:50": 503,
+            "10:00": 501,
+            "14:00": 502
+          }
+        }
+      },
+      {
+        "theaterId": 302,
+        "theaterName": "INOX: GVK One, Banjara Hills",
+        "showTimes": {
+          "2025-01-09": {
+            "12:55": 521
+          },
+          "2025-01-08": {
+            "18:10": 500
+          },
+          "2025-01-07": {
+            "21:50": 519,
+            "10:00": 517,
+            "14:00": 518
+          }
+        }
+      }
+    ]
+  },
+  "movies": [
+    "Pushpa 2: The Rule",
+    "Jawan",
+    "Salaar",
+    "Animal",
+    "Dunki",
+    "KGF 3",
+    "Leo"
+  ]
+}

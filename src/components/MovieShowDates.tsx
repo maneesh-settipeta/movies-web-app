@@ -5,15 +5,15 @@ import { useDispatch } from "react-redux";
 import { setSelectedDate } from "../Store/appMoviesSlice";
 
 const MovieShowDates = () => {
+
     const datesData = useSelector((state) => state?.appMovie?.moviesData);
 
+    const selectedDate = useSelector((state) => state?.appMovie?.selectedDate);
 
     const getDatesKeys = datesData.flatMap((eachDate: string) => Object.keys(eachDate));
-
-
     const dispatch = useDispatch();
-
     const [showDates, setDates] = useState<string[]>([]);
+
     const findDates = (stringDate: string) => {
         const date = parseISO(stringDate);
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -30,15 +30,18 @@ const MovieShowDates = () => {
         setDates(sortedDates);
         const intialValue = sortedDates[0]?.stringDate;
         dispatch(setSelectedDate(intialValue));
-    }, [])
+    }, [datesData]);
 
+
+    const handleShowShows = (date) => {
+        dispatch(setSelectedDate(date));
+    }
 
     return (
-
         <div className="flex justify-between items-center">
-            <div className="flex gap-2 pt-2 pl-36">
+            <div className="flex gap-2  pl-36">
                 {showDates?.map((eachDate) => (
-                    <button className="felx flex-col  p-2 rounded-md " key={eachDate.stringDate}>
+                    <button className={` ${selectedDate === eachDate.stringDate ? "bg-red-500 text-white" : " "}  flex  flex-col  p-2 rounded-md `} key={eachDate.stringDate} onClick={() => handleShowShows(eachDate.stringDate)}>
                         <p className="text-xs">{eachDate.day.slice(0, 3)}</p>
                         <p>{eachDate.formattedDate.slice(0, 2)}</p>
                         <p className="text-xs">{eachDate.formattedDate.slice(3, 6)}</p>
