@@ -24,19 +24,24 @@ const Theatres = () => {
         <div>
             <div className="bg-gray-200  flex justify-center ">
                 <div className="bg-white w-[80vw]   h-[calc(69vh-62px)] mt-3 ">
-                    <div className="flex justify-end gap-2 mr-14 p-2">
-                        <div className="flex items-center gap-1">
-                            <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                            <p className="text-xs">Available</p>
+                    <div className="flex justify-between gap-2 mr-14 p-2">
+                        <div>
+                            <h1 className="pl-5 font-medium text-2xl">Recommended Movies</h1>
                         </div>
+                        <div className="flex gap-2">
+                            <div className="flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                                <p className="text-xs">Available</p>
+                            </div>
 
-                        <div className="flex items-center gap-1">
-                            <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                            <p className="text-xs">Fast Filling</p>
-                        </div>
+                            <div className="flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                                <p className="text-xs">Fast Filling</p>
+                            </div>
 
-                        <div className="flex items-center gap-1">
-                            <p className="text-xs">Subtitles Language</p>
+                            <div className="flex items-center gap-1">
+                                <p className="text-xs">Subtitles Language</p>
+                            </div>
                         </div>
                     </div>
                     {filterShowsForMovie?.map((theaterShows) => (

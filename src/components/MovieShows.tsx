@@ -4,7 +4,7 @@ import Theatres from './Theatres';
 import { useDispatch } from 'react-redux';
 import { setMoviesData } from '../Store/appMoviesSlice';
 import { useLocation } from 'react-router-dom';
-import { baseURL } from '../URL';
+// import { VITE_baseURL } from '../URL';
 
 const MovieShows = () => {
 
@@ -22,7 +22,7 @@ const MovieShows = () => {
     const cityId = URL[5];
 
 
-    const SHOWS_API = `${baseURL}:8765/search-service/api/v2/shows/search?movieId=${movieId}&theaterCityId=${cityId}`;
+    const SHOWS_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/shows/search?movieId=${movieId}&theaterCityId=${cityId}`;
 
     useEffect(() => {
         function sortShowTimings(showTimes) {

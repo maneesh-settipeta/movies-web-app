@@ -1,19 +1,19 @@
 import { useState } from "react";
-const images = [
-    'src/images/Carousel-1.jpg',
-    'src/images/Carousel-2.jpg',
-    'src/images/Carousel-3.jpg',
-    'src/images/Carousel-4.jpg'
+const assets = [
+    'src/assets/Carousel-1.jpg',
+    'src/assets/Carousel-2.jpg',
+    'src/assets/Carousel-3.jpg',
+    'src/assets/Carousel-4.jpg'
 ]
 
 const MoviesCarousel = () => {
 
     const [currentImage, setCurrentImage] = useState<number>(0);
-    const currentImageCarousel = images[currentImage]
+    const currentImageCarousel = assets[currentImage]
 
     const handleBackwardImage = () => {
         if (currentImage === 0) {
-            const lastImage = images.length - 1
+            const lastImage = assets.length - 1
             setCurrentImage(lastImage);
         }
         else {
@@ -23,13 +23,13 @@ const MoviesCarousel = () => {
 
 
     const handleForwardImage = () => {
-        if (currentImage === images.length - 1) {
+        if (currentImage === assets.length - 1) {
             setCurrentImage(0);
         }
         else {
             setCurrentImage((prevImage) => prevImage + 1);
         }
-        
+
     }
 
 

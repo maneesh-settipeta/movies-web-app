@@ -7,7 +7,7 @@ import { setSummary, setSummaryMovieInfo } from '../Store/appPaymentSlice'
 import { useDispatch } from "react-redux";
 import { setSignModelOpen } from '../Store/appLoginSlice';
 import { setSelectedSeats } from '../Store/appMoviesSlice'
-import { baseURL } from "../URL";
+import { VITE_baseURL } from "../URL";
 
 const TheatreSeating = () => {
 
@@ -16,7 +16,6 @@ const TheatreSeating = () => {
     const showID = URL[URL.length - 1];
     const movieId = URL[3];
     const theatreId = URL[5];
-
 
 
     const navigate = useNavigate();
@@ -29,7 +28,7 @@ const TheatreSeating = () => {
         totalPrice: 0,
     });
 
-    const SEATS_API = `http://ec2-3-87-133-155.compute-1.amazonaws.com:8765/search-service/api/theater/seats?showId=${showID}`;
+    const SEATS_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/theater/seats?showId=${showID}`;
 
     const fetchSeats = async () => {
         const data = await axios.get(SEATS_API);
@@ -78,7 +77,7 @@ const TheatreSeating = () => {
 
         else {
             try {
-                const response = await axios.post(`${baseURL}:8765/booking-service/api/booking/summary`, {
+                const response = await axios.post(`${import.meta.env.VITE_baseURL}:8765/booking-service/api/booking/summary`, {
                     seatsUniqueIds: seats.seatIds,
                     showId: showID,
                     currentSeatStatus: 0,
@@ -106,7 +105,7 @@ const TheatreSeating = () => {
 
 
     return (
-        <div>
+        <>
             <div className="flex flex-col h-14 bg-gray-100 justify-center mb-2 pl-5">
                 <h1 className=" text-base font-medium">{details?.movieName}</h1>
                 <div className="flex">
@@ -151,7 +150,7 @@ const TheatreSeating = () => {
                     </div>
                 )}
             </div>
-        </div >
+        </ >
     )
 }
 

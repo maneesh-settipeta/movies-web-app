@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import image from '../images/BookMyShow-Logo.jpg'
+import image from '../assets/BookMyShow-Logo.jpg'
 
 const BookingConfirmed = () => {
     const navigate = useNavigate();

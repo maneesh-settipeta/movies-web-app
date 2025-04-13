@@ -15,7 +15,7 @@ const Summary = () => {
 
     const movieSummaryInfo = useSelector((state) => state?.appPayment?.summaryMovieInfo);
     const summaryInfo = useSelector((state) => state?.appPayment?.summaryData);
-    const paymentType = useSelector((state) => state?.appPayment?.paymentType);
+    // const paymentType = useSelector((state) => state?.appPayment?.paymentType);
     const isPaymentTypeModalOpened = useSelector((state) => state?.appPayment?.isPaymentModalOpen);
 
     const seats = Object.keys(summaryInfo.selectedSeats).toString();
@@ -78,7 +78,7 @@ const Summary = () => {
                     <h3 className="pr-5 font-medium">${`${summaryInfo.subTotalPrize}`}</h3>
                 </div>
                 <button className="flex justify-center bg-red-500 text-white w-96 p-2 h-10  rounded-lg   mt-4"
-                 onClick={handleTogglePayment}>
+                    onClick={handleTogglePayment}>
                     <button>Pay now</button>
                 </button>
             </div>

@@ -3,7 +3,8 @@ import { setTheatresDetails, setModalOpen } from "../Store/appLoginSlice";
 import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { baseURL } from '../URL'
+import { useEffect } from "react";
+// import { VITE_baseURL } from '../URL';
 
 const CitiesModal = () => {
     const cityName = useSelector((store: string) => store?.appLogin?.city?.cityName);
@@ -17,10 +18,17 @@ const CitiesModal = () => {
         dispatch(setModalOpen(false));
     }
 
+
     const fetchCities = async () => {
         try {
-            const { data } = await axios.get(`${baseURL}:8765/search-service/api/v2/cities`);
+            console.log(import.meta.env.VITE_baseURL);
+
+            const { data } = await axios.get(`${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/cities`);
+
+
+            console.log(data);
             return data;
+
         } catch (error) {
             console.error(error);
         }

@@ -6,8 +6,11 @@ import Shimmer from "./Shimmer";
 import { useDispatch } from "react-redux";
 import { setSelectedMovieId } from '../Store/appMoviesSlice'
 import MoviesCarousel from "./MoviesCarousel";
-import { baseURL } from '../URL';
+// import { VITE_baseURL } from '../URL';
 import imagesMap from "../movieImages";
+import BMSImage1 from '../assets/BMS-I-1.png';
+import BMSImage2 from '../assets/BMSI-2.png';
+import BMSImage3 from '../assets/BMS-3.png';
 
 
 
@@ -15,7 +18,7 @@ const MoviesList = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const cityId = useSelector((state) => state?.appLogin?.city?.cityId) || localStorage.getItem('locationId');
-    const Movies_API = `${baseURL}:8765/search-service/api/v2/movie/explore?cityId=${cityId}`;
+    const Movies_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/movie/explore?cityId=${cityId}`;
     const fetchMovies = async () => {
         const { data } = await axios.get(Movies_API);
         return data;
@@ -59,7 +62,12 @@ const MoviesList = () => {
                     </button>
                 ))}
             </div>
+            <div>
 
+            </div>
+            <img src={BMSImage1} />
+            <img src={BMSImage2} />
+            <img src={BMSImage3} />
         </div>
     )
 }

@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
 import { setModalOpen, setSignModelOpen, setSignUpModalOpen, setUser, setTheatresDetails } from "../Store/appLoginSlice";
-
 import { useEffect, useState, useRef } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { movies } from "../movieList";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import image from '../images/BookMyShow-Logo.jpg'
+import image from '../assets/BookMyShow-Logo.jpg';
 
 interface Movie {
     name: string
@@ -44,8 +43,6 @@ const Header = () => {
 
 
     const handleSearch = (event) => {
-
-
         const movieSearch = event.target.value;
         setSearchValue(movieSearch);
         if (movieSearch) {
@@ -62,6 +59,8 @@ const Header = () => {
 
 
     useEffect(() => {
+        console.log(import.meta.env, "  ia min header");
+
         if (cityName === undefined) {
             cityName = localStorage.getItem('locationName');
         }

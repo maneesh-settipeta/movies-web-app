@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setPaymentMethod, setPaymentModalToggle, setBookingInfo } from '../Store/appPaymentSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { baseURL } from '../URL'
+// import { VITE_baseURL } from '../URL'
 
 const PaymentOptionsModal = () => {
 
@@ -81,7 +81,7 @@ const PaymentOptionsModal = () => {
         else {
             const requestBodySample = sampleRequestBodies.find((reqBody) => reqBody.type === paymethodType);
             console.log(requestBodySample?.requestBody);
-            const bookTicket = await axios.post(`${baseURL}:8765/payment-service/api/payment`, requestBodySample?.requestBody);
+            const bookTicket = await axios.post(`${import.meta.env.VITE_baseURL}:8765/payment-service/api/payment`, requestBodySample?.requestBody);
             console.log(bookTicket);
             if (bookTicket.status === 200) {
                 dispatch(setBookingInfo(bookTicket));

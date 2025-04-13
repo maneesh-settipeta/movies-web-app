@@ -4,7 +4,7 @@ import { setSignUpModalOpen, setUser } from '../Store/appLoginSlice'
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { baseURL } from '../URL'
+// import { VITE_baseURL } from '../URL'
 
 const LoginModal = () => {
   const dispatch = useDispatch();
@@ -55,7 +55,7 @@ const LoginModal = () => {
 
   const saveUserData = async () => {
     try {
-      const makeRegisterRequest = await axios.post(`${baseURL}:8765/user-service/api/register`, { ...formData });
+      const makeRegisterRequest = await axios.post(`${import.meta.env.VITE_baseURL}:8765/user-service/api/register`, { ...formData });
 
       if (makeRegisterRequest.status === 201) {
         dispatch(setSignUpModalOpen(false));
@@ -78,7 +78,7 @@ const LoginModal = () => {
       //         "Content-Type": "application/json"
       //       }
       //     })
-      const makeLoginRequest = await fetch(`${baseURL}:8765/user-service/api/login`,
+      const makeLoginRequest = await fetch(`${import.meta.env.VITE_baseURL}:8765/user-service/api/login`,
         {
           method: "POST",
           headers: {
@@ -100,10 +100,6 @@ const LoginModal = () => {
         dispatch(setSignUpModalOpen(false));
         setFormData({ userEmail: '', userName: '', userPassword: '' });
       }
-      else {
-
-      }
-
 
     } catch (error) {
       console.error(error);
