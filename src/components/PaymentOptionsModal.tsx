@@ -81,7 +81,7 @@ const PaymentOptionsModal = () => {
         else {
             const requestBodySample = sampleRequestBodies.find((reqBody) => reqBody.type === paymethodType);
             console.log(requestBodySample?.requestBody);
-            const bookTicket = await axios.post(`${import.meta.env.VITE_baseURL}:8765/payment-service/api/payment`, requestBodySample?.requestBody);
+            const bookTicket = await axios.post(`${import.meta.env.VITE_baseURL}/payment-service/api/payment`, requestBodySample?.requestBody);
             console.log(bookTicket);
             if (bookTicket.status === 200) {
                 dispatch(setBookingInfo(bookTicket));

@@ -18,7 +18,7 @@ const MoviesList = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const cityId = useSelector((state) => state?.appLogin?.city?.cityId) || localStorage.getItem('locationId');
-    const Movies_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/movie/explore?cityId=${cityId}`;
+    const Movies_API = `${import.meta.env.VITE_baseURL}/search-service/api/v2/movie/explore?cityId=${cityId}`;
     const fetchMovies = async () => {
         const { data } = await axios.get(Movies_API);
         return data;

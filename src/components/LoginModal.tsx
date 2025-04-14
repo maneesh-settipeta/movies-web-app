@@ -55,7 +55,7 @@ const LoginModal = () => {
 
   const saveUserData = async () => {
     try {
-      const makeRegisterRequest = await axios.post(`${import.meta.env.VITE_baseURL}:8765/user-service/api/register`, { ...formData });
+      const makeRegisterRequest = await axios.post(`${import.meta.env.VITE_baseURL}/user-service/api/register`, { ...formData });
 
       if (makeRegisterRequest.status === 201) {
         dispatch(setSignUpModalOpen(false));
@@ -71,14 +71,14 @@ const LoginModal = () => {
     try {
       // const makeLoginRequest = await axios
       //   .post(
-      //     'http://ec2-3-87-133-155.compute-1.amazonaws.com:8765/user-service/api/login',
+      //     'http://ec2-3-87-133-155.compute-1.amazonaws.comuser-service/api/login',
       //     { userEmail: formData.userEmail, userPassword: formData.userPassword },
       //     {
       //       headers: {
       //         "Content-Type": "application/json"
       //       }
       //     })
-      const makeLoginRequest = await fetch(`${import.meta.env.VITE_baseURL}:8765/user-service/api/login`,
+      const makeLoginRequest = await fetch(`${import.meta.env.VITE_baseURL}/user-service/api/login`,
         {
           method: "POST",
           headers: {

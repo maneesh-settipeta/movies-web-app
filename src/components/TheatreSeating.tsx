@@ -28,7 +28,7 @@ const TheatreSeating = () => {
         totalPrice: 0,
     });
 
-    const SEATS_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/theater/seats?showId=${showID}`;
+    const SEATS_API = `${import.meta.env.VITE_baseURL}/search-service/api/theater/seats?showId=${showID}`;
 
     const fetchSeats = async () => {
         const data = await axios.get(SEATS_API);
@@ -77,7 +77,7 @@ const TheatreSeating = () => {
 
         else {
             try {
-                const response = await axios.post(`${import.meta.env.VITE_baseURL}:8765/booking-service/api/booking/summary`, {
+                const response = await axios.post(`${import.meta.env.VITE_baseURL}/booking-service/api/booking/summary`, {
                     seatsUniqueIds: seats.seatIds,
                     showId: showID,
                     currentSeatStatus: 0,

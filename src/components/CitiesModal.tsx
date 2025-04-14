@@ -23,7 +23,7 @@ const CitiesModal = () => {
         try {
             console.log(import.meta.env.VITE_baseURL);
 
-            const { data } = await axios.get(`${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/cities`);
+            const { data } = await axios.get(`${import.meta.env.VITE_baseURL}/search-service/api/v2/cities`);
 
 
             console.log(data);

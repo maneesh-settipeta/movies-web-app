@@ -22,7 +22,7 @@ const MovieShows = () => {
     const cityId = URL[5];
 
 
-    const SHOWS_API = `${import.meta.env.VITE_baseURL}:8765/search-service/api/v2/shows/search?movieId=${movieId}&theaterCityId=${cityId}`;
+    const SHOWS_API = `${import.meta.env.VITE_baseURL}/search-service/api/v2/shows/search?movieId=${movieId}&theaterCityId=${cityId}`;
 
     useEffect(() => {
         function sortShowTimings(showTimes) {
