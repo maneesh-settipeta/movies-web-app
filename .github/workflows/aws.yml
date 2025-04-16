@@ -94,4 +94,4 @@ jobs:
           body: "The ECS deployment of BookMyShow was successful. Image has been updated and service is running."
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_USERNAME }}
-          secure: true
+          secure: false
