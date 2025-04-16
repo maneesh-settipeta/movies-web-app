@@ -40,7 +40,7 @@ const PaymentOptionsModal = () => {
             }
         },
         {
-            type: "netBanking", requestBody: {
+            type: "NetBanking", requestBody: {
                 "uniqueSeatIds": selectedSeats,
                 "showId": showId,
                 "userId": userId,
@@ -53,7 +53,7 @@ const PaymentOptionsModal = () => {
             }
         },
         {
-            type: "card", requestBody: {
+            type: "Card", requestBody: {
                 "uniqueSeatIds": selectedSeats,
                 "showId": showId,
                 "userId": userId,
@@ -108,6 +108,7 @@ const PaymentOptionsModal = () => {
                                 name="payment"
                                 value={option}
                                 onChange={handleChangeRadio}
+                                className='font-medium'
                             />
                             <span >{option}</span>
                         </label>
