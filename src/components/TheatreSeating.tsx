@@ -74,6 +74,7 @@ const TheatreSeating = () => {
 
     const getSummaryDetails = async () => {
         const userDetails = localStorage.getItem('userDetails');
+
         if (!userDetails) {
             dispatch(setSignModelOpen(true));
         }
