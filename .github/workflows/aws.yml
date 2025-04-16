@@ -55,6 +55,26 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
+      - name: Stop current running task
+        run: |
+          echo "Fetching running tasks..."
+          TASK_ARN=$(aws ecs list-tasks \
+            --cluster ${{ env.ECS_CLUSTER }} \
+            --service-name ${{ env.ECS_SERVICE }} \
+            --desired-status RUNNING \
+            --query "taskArns[0]" \
+            --output text)
+
+          if [ "$TASK_ARN" != "None" ]; then
+            echo "Stopping task: $TASK_ARN"
+            aws ecs stop-task \
+              --cluster ${{ env.ECS_CLUSTER }} \
+              --task $TASK_ARN \
+              --reason "Stopping old task before deployment"
+          else
+            echo "No running task found to stop."
+          fi
+
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
