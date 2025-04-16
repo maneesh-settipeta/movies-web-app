@@ -31,8 +31,13 @@ const TheatreSeating = () => {
     const SEATS_API = `${import.meta.env.VITE_baseURL}/search-service/api/theater/seats?showId=${showID}`;
 
     const fetchSeats = async () => {
-        const data = await axios.get(SEATS_API);
-        return data
+        try {
+            const data = await axios.get(SEATS_API);
+            return data
+        } catch (error) {
+            console.error(error);
+        }
+
     }
 
     const { data } = useQuery({
