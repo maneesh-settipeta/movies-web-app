@@ -36,7 +36,7 @@ const BookingConfirmed = () => {
                     <h2 className="text-green-600 mb-6 font-bold"> T I C K E T <span className="mr-2"></span> C O N F I R M A T I O N</h2>
                     <div className="flex justify-between">
                         <div>
-                            <h1 className="font-medium h-7 w-full text-2xl mb-4">{data?.showDetails?.movieName}</h1>
+                            <h1 className="font-medium h-7 w-full text-1xl mb-4">{data?.showDetails?.movieName}</h1>
                             <p className="font-medium h-7 w-full text-1sxl ">{data?.showDetails?.theaterName}</p>
                             <div className="flex gap-3">
                                 <p>{data?.showDetails?.showDate}</p>
