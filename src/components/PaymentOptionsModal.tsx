@@ -10,22 +10,22 @@ const PaymentOptionsModal = () => {
     const dispatch = useDispatch();
     const paymethodType = useSelector((state) => state?.appPayment?.paymentType);
     const selectedSeats = useSelector((state => state?.appMovie?.selectedSeats));
-    console.log(selectedSeats);
+    (selectedSeats);
 
-    console.log(paymethodType);
+    (paymethodType);
 
     const userDetails = localStorage.getItem('userDetails');
     const parseUserDetails = JSON.parse(userDetails)
     const userId = parseUserDetails.userId;
     const showId = parseInt(localStorage.getItem('showId'));
 
-    console.log(showId);
+    (showId);
 
     const handleChangeRadio = (e) => {
         dispatch(setPaymentMethod(e.target.value));
     }
 
-    const options = ['UPI', 'netBanking', 'card'];
+    const options = ['UPI', 'NetBanking', 'Card'];
 
     const sampleRequestBodies = [
         {
@@ -80,9 +80,9 @@ const PaymentOptionsModal = () => {
         }
         else {
             const requestBodySample = sampleRequestBodies.find((reqBody) => reqBody.type === paymethodType);
-            console.log(requestBodySample?.requestBody);
+            (requestBodySample?.requestBody);
             const bookTicket = await axios.post(`${import.meta.env.VITE_baseURL}/payment-service/api/payment`, requestBodySample?.requestBody);
-            console.log(bookTicket);
+            (bookTicket);
             if (bookTicket.status === 200) {
                 dispatch(setBookingInfo(bookTicket));
                 navigate('/movie/city/theatre/booked');
@@ -96,10 +96,10 @@ const PaymentOptionsModal = () => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white rounded-lg p-6 shadow-lg min-w-[300px]">
-                <div className=' flex justify-end mb-2' onClick={handleClosePaymentToggle}>
-                    <button className='p-1 bg-red-500 rounded-md text-white w-8'>X</button>
+                <div className=' flex justify-between ' onClick={handleClosePaymentToggle}>
+                    <h2 className="text-base font-medium mb-4">Select Payment Method</h2>
+                    <button className=' bg-red-500 rounded-md text-white w-6 h-6 text-sm'>X</button>
                 </div>
-                <h2 className="text-xl font-semibold mb-4">Select Payment Method</h2>
                 {options.map((option, index) => (
                     <div key={index} className="mb-2 ">
                         <label className="flex items-center gap-2 cursor-pointer">

@@ -37,6 +37,8 @@ const Header = () => {
     const isCityModalOpen = useSelector((store: boolean) => store?.appLogin?.isCityModalOpen);
 
 
+
+
     const handleSelectCity = () => {
         dispatch(setModalOpen(!isCityModalOpen));
     }
@@ -55,15 +57,15 @@ const Header = () => {
             setShowDropDown(false);
         }
     }
-    let cityName = useSelector((state) => state?.appLogin?.city?.cityName);
+    // let cityName = useSelector((state) => state?.appLogin?.city?.cityName);
 
+
+    const cityName = localStorage.getItem('locationName');
 
     useEffect(() => {
-        console.log(import.meta.env, "  ia min header");
 
-        if (cityName === undefined) {
-            cityName = localStorage.getItem('locationName');
-        }
+
+
 
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -93,7 +95,8 @@ const Header = () => {
         dispatch(setUser({
             userName: '',
             userEmail: '',
-            userId: null
+            userId: null,
+
         }));
         dispatch(setTheatresDetails(''));
         dispatch(setModalOpen(true));
@@ -133,16 +136,19 @@ const Header = () => {
                         }
                     </div>
                 </div>
-                <div className="flex items-center pr-16 ">
-                    <div className="flex items-center mr-9 cursor-pointer " onClick={() => handleSelectCity()}>{cityName === undefined ? "Please select city" : cityName}
+                <div className=" w-80 flex justify-between pr-10">
+                    <div className="flex items-center mr-9 cursor-pointer font-medium" onClick={() => handleSelectCity()}>{cityName === undefined ? "Please select city" : cityName}
                         <h4 className="  p-1 rounded-md " >
                             <label> <i className="fas fa-chevron-down cursor-pointer"></i></label>
                         </h4>
                     </div>
-                    {userName ? <button className="text-red-500 w-32" onClick={handleToggleLogout}> Hi, {firstName[0]}
-                        {handleDropDown ? <button className="absolute right-24 border w-20 top-12 px-2 py-1 rounded-md bg-white text-black" onClick={handleLogout}>Logout</button> : null}
-                    </button> :
-                        <button className="bg-red-500 text-white p-1 rounded-md w-14" onClick={handleToggleLoginModal}>Login</button>}
+                    <div className="flex items-center w-40 ">
+                        {userName ? <button className="text-red-500  font-medium" onClick={handleToggleLogout}> Hi, {firstName[0]}
+                            {handleDropDown ? <button className="absolute right-24 border top-12 px-2 py-1 rounded-md bg-white text-black" onClick={handleLogout}>Logout</button> : null}
+                        </button> :
+                            <button className="bg-red-500 text-white p-1 rounded-md w-14" onClick={handleToggleLoginModal}>Login</button>}
+                        {userName && <i className="fas fa-user ml-2 "></i>}
+                    </div>
                 </div>
             </div>
         </>

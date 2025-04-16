@@ -30,7 +30,7 @@ const appPaymentSlice = createSlice({
     }
 });
 
-console.log(initialState.isPaymentModalOpen, "isPaymentModalOpen");
+(initialState.isPaymentModalOpen, "isPaymentModalOpen");
 
 
 

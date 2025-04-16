@@ -35,7 +35,7 @@ const MainPage = () => {
                 <Header />
             </div>
             <Outlet />
-            {isCityModalOpenn ? <CitiesModal /> : null}
+            {!cityName || isCityModalOpenn ? <CitiesModal /> : null}
             {signInModalStatus || sigUpModalStatus ? <LoginModal /> : null}
         </div>
     )
