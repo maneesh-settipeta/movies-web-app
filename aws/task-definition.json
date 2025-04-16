@@ -88,6 +88,5 @@
   },
   "registeredAt": "2025-04-15T19:51:34.151Z",
   "registeredBy": "arn:aws:iam::905418150190:user/Mounika-Dummu",
-  "enableFaultInjection": false,
   "tags": []
 }
