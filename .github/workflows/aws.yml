@@ -86,12 +86,22 @@ jobs:
       - name: Send success email notification
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: ${{ secrets.EMAIL_HOST }}
-          server_port: ${{ secrets.EMAIL_PORT }}
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
+          server_address: ${{ secrets.EMAIL_HOST }} # e.g., smtp.gmail.com
+          server_port: ${{ secrets.EMAIL_PORT }} # e.g., 465 or 587
+          username: ${{ secrets.EMAIL_USERNAME }} # Full email address
+          password: ${{ secrets.EMAIL_PASSWORD }} # App password or real password (use App Password for Gmail)
           subject: "✅ BookMyShow Deployment Successful"
-          body: "The ECS deployment of BookMyShow was successful. Image has been updated and service is running."
-          to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            Hello Team,
+
+            🎉 The ECS deployment of BookMyShow was successful.
+
+            ✅ Docker image updated  
+            ✅ ECS task started and stable  
+            ✅ Service running correctly
+
+            Best regards,  
+            GitHub Actions
+          to: ${{ secrets.EMAIL_TO }} # Comma-separated emails
+          from: ${{ secrets.EMAIL_USERNAME }} # Must match the sending email
           secure: false
