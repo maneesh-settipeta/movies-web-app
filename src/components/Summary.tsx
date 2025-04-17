@@ -28,7 +28,7 @@ const Summary = () => {
 
     const handleTogglePayment = () => {
         dispatch(setPaymentModalToggle(true));
-        console.log(isPaymentTypeModalOpened, " isPaymentTypeModalOpened");
+        (isPaymentTypeModalOpened, " isPaymentTypeModalOpened");
 
     }
 

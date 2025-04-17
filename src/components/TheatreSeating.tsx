@@ -34,6 +34,8 @@ const TheatreSeating = () => {
             const data = await axios.get(SEAT_API);
             return data
         } catch (error) {
+            alert(error.response.data.errorMsg);
+            navigate(-1);
             console.error(error);
         }
     }
@@ -44,7 +46,7 @@ const TheatreSeating = () => {
         refetchOnWindowFocus: false,
 
     });
-    console.log(data);
+
 
     const details = data?.data?.showDetails;
     const seatDetails = data?.data?.seatDetails
@@ -87,7 +89,6 @@ const TheatreSeating = () => {
                     currentSeatStatus: 0,
                     isUpdateRequired: true
                 })
-                console.log(response);
                 if (response.status === 200) {
                     dispatch(setSummary(response.data.seatPricingDetails));
                     dispatch(setSummaryMovieInfo(response.data.showDetails));
@@ -142,7 +143,7 @@ const TheatreSeating = () => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center ">
-                    <div className="bg-gray-200 w-3/4 h-10 flex items-center justify-center rounded-lg">
+                    <div className="bg-gray-200 w-2/4 h-10 flex items-center justify-center rounded-lg">
                         <h4 className="text-lg font-medium">SCREEN</h4>
                     </div>
                 </div>
