@@ -22,6 +22,7 @@ const MainPage = () => {
     const cityName: string | null = localStorage.getItem('locationName');
 
 
+
     // useEffect(() => {
     //     if (cityName1) {
     //         dispatch(setTheatresDetails(cityName1));
