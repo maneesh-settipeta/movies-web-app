@@ -13,7 +13,8 @@ const CitiesModal = () => {
     const dispatch = useDispatch();
 
     const handleSelectCity = (theatreData) => {
-
+        localStorage.setItem('locationId', theatreData.cityId);
+        localStorage.setItem('locationName', theatreData.cityName);
         dispatch(setTheatresDetails(theatreData));
         dispatch(setModalOpen(false));
     }
@@ -21,12 +22,9 @@ const CitiesModal = () => {
 
     const fetchCities = async () => {
         try {
-            console.log(import.meta.env.VITE_baseURL);
-
+            (import.meta.env.VITE_baseURL);
             const { data } = await axios.get(`${import.meta.env.VITE_baseURL}/search-service/api/v2/cities`);
-
-
-            console.log(data);
+            (data);
             return data;
 
         } catch (error) {

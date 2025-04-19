@@ -28,16 +28,16 @@ const TheatreSeating = () => {
         totalPrice: 0,
     });
 
-    const SEATS_API = `${import.meta.env.VITE_baseURL}/search-service/api/theater/seats?showId=${showID}`;
-
+    const SEAT_API = `${import.meta.env.VITE_baseURL}/search-service/api/theater/seats?showId=${showID}`;
     const fetchSeats = async () => {
         try {
-            const data = await axios.get(SEATS_API);
+            const data = await axios.get(SEAT_API);
             return data
         } catch (error) {
+            alert(error.response.data.errorMsg);
+            navigate(-1);
             console.error(error);
         }
-
     }
 
     const { data } = useQuery({
@@ -46,7 +46,7 @@ const TheatreSeating = () => {
         refetchOnWindowFocus: false,
 
     });
-    console.log(data);
+
 
     const details = data?.data?.showDetails;
     const seatDetails = data?.data?.seatDetails
@@ -76,6 +76,7 @@ const TheatreSeating = () => {
 
     const getSummaryDetails = async () => {
         const userDetails = localStorage.getItem('userDetails');
+
         if (!userDetails) {
             dispatch(setSignModelOpen(true));
         }
@@ -88,7 +89,6 @@ const TheatreSeating = () => {
                     currentSeatStatus: 0,
                     isUpdateRequired: true
                 })
-                console.log(response);
                 if (response.status === 200) {
                     dispatch(setSummary(response.data.seatPricingDetails));
                     dispatch(setSummaryMovieInfo(response.data.showDetails));
@@ -143,7 +143,7 @@ const TheatreSeating = () => {
                     </div>
                 </div>
                 <div className="w-full flex justify-center ">
-                    <div className="bg-gray-200 w-3/4 h-10 flex items-center justify-center rounded-lg">
+                    <div className="bg-gray-200 w-2/4 h-10 flex items-center justify-center rounded-lg">
                         <h4 className="text-lg font-medium">SCREEN</h4>
                     </div>
                 </div>

@@ -43,7 +43,7 @@ const MoviesList = () => {
 
     if (isLoading) return <Shimmer />;
 
-    console.log(imagesMap.get(201));
+    (imagesMap.get(201));
 
 
     return (
@@ -52,15 +52,20 @@ const MoviesList = () => {
                 <MoviesCarousel />
             </div>
             <div className="flex justify-center ">
-                {moviesListBasedOnCities?.map(([id]) => (
+                {moviesListBasedOnCities?.map(([id, movieName]) => (
+                    <div>
 
-                    <button key={id} className="h-64 w-40   m-3 rounded-lg text-center  "
-                        onClick={() => handleShowShows(Number(id))}
-                    >
-                        <img src={imagesMap.get(id)} className="h-fit w-fit" />
-                        {/* <h1 className="font-bold text-1xl">{eachMovie}</h1> */}
-                    </button>
+                        <button key={id} className="h-64 w-40   mt-3 ml-3 mr-3 rounded-lg text-center  "
+                            onClick={() => handleShowShows(Number(id))}
+                        >
+                            <img src={imagesMap.get(id)} className="h-fit w-fit rounded-lg" />
+                            {/* <h1 className="font-bold text-1xl">{eachMovie}</h1> */}
+                        </button>
+                        <h1 className="mb-3 mr-3 ml-4   w-36 font-medium break-words "> {movieName}</h1>
+                        <p className="font-medium text-gray-400 text-xs  w-36 mb-3 mr-3 ml-4 ">Action/Drama/Thriller</p>
+                    </div>
                 ))}
+
             </div>
             <div>
 

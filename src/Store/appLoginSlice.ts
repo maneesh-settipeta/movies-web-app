@@ -8,7 +8,7 @@ interface cityDetails {
 interface AppLoginTypes {
     isUserLoggedIn: boolean,
     city: cityDetails,
-    isCityModalOpen: boolean,
+    isCityModalOpen: boolean | string,
     signInModalToggle: boolean,
     signUpModalToggle: boolean,
     userDetails: {
@@ -17,6 +17,7 @@ interface AppLoginTypes {
         userId: number | null
     }
 }
+const isCityNameThereInLS = localStorage.getItem('locationName');
 
 const initialState: AppLoginTypes = {
     isUserLoggedIn: false,
@@ -24,7 +25,7 @@ const initialState: AppLoginTypes = {
         cityId: 0,
         cityName: ''
     },
-    isCityModalOpen: true,
+    isCityModalOpen: !isCityNameThereInLS && true,
     signInModalToggle: false,
     signUpModalToggle: false,
     userDetails: {
@@ -56,8 +57,7 @@ const appLoginSlice = createSlice({
         },
 
         setTheatresDetails: (state, action) => {
-            localStorage.setItem("locationId", action.payload.cityId);
-            localStorage.setItem('locationName', action.payload.cityName);
+
             state.city = action.payload
         }
     }

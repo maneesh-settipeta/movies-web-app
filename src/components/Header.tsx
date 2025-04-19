@@ -6,6 +6,8 @@ import { movies } from "../movieList";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import image from '../assets/BookMyShow-Logo.jpg';
+// import { useRef } from "react";
+import axios from "axios";
 
 interface Movie {
     name: string
@@ -22,6 +24,7 @@ const Header = () => {
     const userName = useSelector((state) => state?.appLogin?.userDetails?.userName) || parseUserData?.userName;
     const firstName = userName?.split(' ');
     const navigate = useNavigate();
+    const debounce = useRef(null);
 
 
     const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
@@ -37,6 +40,8 @@ const Header = () => {
     const isCityModalOpen = useSelector((store: boolean) => store?.appLogin?.isCityModalOpen);
 
 
+
+
     const handleSelectCity = () => {
         dispatch(setModalOpen(!isCityModalOpen));
     }
@@ -45,25 +50,37 @@ const Header = () => {
     const handleSearch = (event) => {
         const movieSearch = event.target.value;
         setSearchValue(movieSearch);
-        if (movieSearch) {
-            const filterMovie = movies.filter((eachMovie) => eachMovie.toLowerCase().includes(movieSearch.toLowerCase()));
-            setFilteredMovies(filterMovie);
-            setShowDropDown(true);
+        if (debounce.current) {
+            clearTimeout(debounce.current);
         }
-        else {
-            setFilteredMovies([]);
-            setShowDropDown(false);
-        }
-    }
-    let cityName = useSelector((state) => state?.appLogin?.city?.cityName);
 
+        debounce.current = setTimeout(async () => {
+            if (movieSearch) {
+                try {
+                    const searchMovie = await axios.get(`${import.meta.env.VITE_baseURL}/search-service/api/movie/search?movieName=${movieSearch}`);
+                    console.log(searchMovie);
+                    setFilteredMovies(searchMovie.data);
+                    setShowDropDown(true);
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+            else {
+                setFilteredMovies([]);
+                setShowDropDown(false);
+            }
+
+        }, 500)
+    }
+    // let cityName = useSelector((state) => state?.appLogin?.city?.cityName);
+
+
+    const cityName = localStorage.getItem('locationName');
 
     useEffect(() => {
-        console.log(import.meta.env, "  ia min header");
 
-        if (cityName === undefined) {
-            cityName = localStorage.getItem('locationName');
-        }
+
+
 
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -93,7 +110,8 @@ const Header = () => {
         dispatch(setUser({
             userName: '',
             userEmail: '',
-            userId: null
+            userId: null,
+
         }));
         dispatch(setTheatresDetails(''));
         dispatch(setModalOpen(true));
@@ -122,7 +140,7 @@ const Header = () => {
                             <div className="absolute  top-12  w-full bg-white border border-gray-300 rounded-md min-h">
                                 {filteredMovies.length > 0 ?
                                     filteredMovies.map((eachMovie, index) => (
-                                        <div key={index} className="p-2 hover:bg-gray-200 cursor-pointer text-left">
+                                        <div key={index} className="p-2 hover:bg-gray-200 cursor-pointer text-left" >
                                             <h4>{eachMovie}</h4>
                                         </div>
                                     ))
@@ -132,17 +150,21 @@ const Header = () => {
                             </div>
                         }
                     </div>
+
                 </div>
-                <div className="flex items-center pr-16 ">
-                    <div className="flex items-center mr-9 cursor-pointer " onClick={() => handleSelectCity()}>{cityName === undefined ? "Please select city" : cityName}
+                <div className=" w-80 flex justify-between pr-10">
+                    <div className="flex items-center mr-9 cursor-pointer font-medium" onClick={() => handleSelectCity()}>{cityName === undefined ? "Please select city" : cityName}
                         <h4 className="  p-1 rounded-md " >
                             <label> <i className="fas fa-chevron-down cursor-pointer"></i></label>
                         </h4>
                     </div>
-                    {userName ? <button className="text-red-500 w-32" onClick={handleToggleLogout}> Hi, {firstName[0]}
-                        {handleDropDown ? <button className="absolute right-24 border w-20 top-12 px-2 py-1 rounded-md bg-white text-black" onClick={handleLogout}>Logout</button> : null}
-                    </button> :
-                        <button className="bg-red-500 text-white p-1 rounded-md w-14" onClick={handleToggleLoginModal}>Login</button>}
+                    <div className="flex items-center w-40 ">
+                        {userName ? <button className="text-red-500  font-medium" onClick={handleToggleLogout}> Hi, {firstName[0]}
+                            {handleDropDown ? <button className="absolute right-32 border top-12 px-2 py-1 rounded-md bg-white text-black" onClick={handleLogout}>Logout</button> : null}
+                        </button> :
+                            <button className="bg-red-500 text-white p-1 rounded-md w-14" onClick={handleToggleLoginModal}>Login</button>}
+                        {userName && <i className="fas fa-user ml-2 "></i>}
+                    </div>
                 </div>
             </div>
         </>

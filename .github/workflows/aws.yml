@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECS_SERVICE: BookMyShow-Service
-  ECS_CLUSTER: bookMyShowCluster
+  ECS_CLUSTER: DevCluster
   ECS_TASK_DEFINITION: ./aws/task-definition.json
   CONTAINER_NAME: bookmyshow-container-image
 
@@ -55,26 +55,6 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
-      - name: Stop current running ECS task
-        run: |
-          echo "Fetching running ECS task..."
-          TASK_ARN=$(aws ecs list-tasks \
-            --cluster ${{ env.ECS_CLUSTER }} \
-            --service-name ${{ env.ECS_SERVICE }} \
-            --desired-status RUNNING \
-            --query "taskArns[0]" \
-            --output text)
-
-          if [ "$TASK_ARN" != "None" ] && [ -n "$TASK_ARN" ]; then
-            echo "Stopping ECS task: $TASK_ARN"
-            aws ecs stop-task \
-              --cluster ${{ env.ECS_CLUSTER }} \
-              --task $TASK_ARN \
-              --reason "Stopping previous task before deploying new one"
-          else
-            echo "No running ECS task found."
-          fi
-
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
@@ -90,7 +70,7 @@ jobs:
           server_port: ${{ secrets.EMAIL_PORT }} # e.g., 465 or 587
           username: ${{ secrets.EMAIL_USERNAME }} # Full email address
           password: ${{ secrets.EMAIL_PASSWORD }} # App password or real password (use App Password for Gmail)
-          subject: "✅ BookMyShow Deployment Successful"
+          subject: "✅ BookMyShow-UI Deployment Successful"
           body: |
             Hello Team,
 
@@ -101,7 +81,7 @@ jobs:
             ✅ Service running correctly
 
             Best regards,  
-            GitHub Actions
+            BookMyShow Team
           to: ${{ secrets.EMAIL_TO }} # Comma-separated emails
           from: ${{ secrets.EMAIL_USERNAME }} # Must match the sending email
           secure: false

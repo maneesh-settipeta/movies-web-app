@@ -9,11 +9,11 @@ const BookingConfirmed = () => {
 
     const data = bookedConfirmationData.data;
 
-    console.log(bookedConfirmationData.data);
+    (bookedConfirmationData.data);
 
 
     const seats = Object.keys(data?.seatPricingDetails?.selectedSeats);
-    console.log(seats);
+    (seats);
 
 
     const handleReturnHome = () => {
