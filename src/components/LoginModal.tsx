@@ -152,7 +152,7 @@ const LoginModal = () => {
         {!sigInModalStatus && sigUpModalStatus &&
           <div>  <h2 className="text-2xl font-medium text-center mb-6">Sign Up</h2>
             <div className="mb-4">
-              <label className="block text-lg mb-1">Username</label>
+              <label className="block text-base mb-1">Username</label>
               <input
                 type="text"
                 value={formData.userName}
@@ -163,7 +163,7 @@ const LoginModal = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-lg mb-1">Email</label>
+              <label className="block text-base mb-1">Email</label>
               <input
                 type="email"
                 value={formData.userEmail}
@@ -174,7 +174,7 @@ const LoginModal = () => {
               />
             </div>
             <div className="mb-6">
-              <label className="block text-lg mb-1">Password</label>
+              <label className="block text-base mb-1">Password</label>
               <input
                 type="password"
                 name="userPassword"
@@ -185,7 +185,7 @@ const LoginModal = () => {
               />
             </div>
             <div className="mb-6">
-              <label className="block text-lg mb-1">Confirm Password</label>
+              <label className="block text-base mb-1">Confirm Password</label>
               <input
                 type="password"
                 className="w-full h-10 px-3 rounded-md border border-black bg-transparent text-black placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
