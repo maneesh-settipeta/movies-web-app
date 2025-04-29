@@ -17,10 +17,11 @@ permissions:
 jobs:
   deploy:
     name: Deploy
+    # what is this ubuntu-latest,
     runs-on: ubuntu-latest
     environment: production
-
     steps:
+      # why exactly we using this v4 and do we need to write checkout only or any random text
       - name: Checkout
         uses: actions/checkout@v4
 
