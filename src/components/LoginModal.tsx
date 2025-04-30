@@ -67,6 +67,7 @@ const LoginModal = () => {
     }
   }
 
+
   const loginUser = async () => {
     try {
       // const makeLoginRequest = await axios
