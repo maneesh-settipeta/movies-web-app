@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance"
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -20,15 +20,20 @@ const MoviesList = () => {
     const cityId = useSelector((state) => state?.appLogin?.city?.cityId) || localStorage.getItem('locationId');
     const Movies_API = `${import.meta.env.VITE_baseURL}/search-service/api/v2/movie/explore?cityId=${cityId}`;
     const fetchMovies = async () => {
-        const { data } = await axios.get(Movies_API);
+        // const { data } = await axios.get(Movies_API);
+        const { data } = await axiosInstance.get(Movies_API);
+        // console.log(data);
+
         return data;
     }
 
-    const { data, isLoading } = useQuery({
+    const { data, isLoading, isError, error } = useQuery({
         queryKey: ["movies", cityId],
         queryFn: fetchMovies,
     });
-
+    if (isError) {
+        alert("Errro " + error)
+    }
     const moviesListBasedOnCities = data ? Object.entries(data) : []
 
 

@@ -82,7 +82,7 @@ const LoginModal = () => {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/pdf"
           },
           body: JSON.stringify({
             userEmail: formData.userEmail,
