@@ -78,10 +78,6 @@ const Header = () => {
     const cityName = localStorage.getItem('locationName');
 
     useEffect(() => {
-
-
-
-
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowDropDown(false);
