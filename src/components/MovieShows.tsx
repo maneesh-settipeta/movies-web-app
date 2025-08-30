@@ -11,6 +11,8 @@ const MovieShows = () => {
     const dispatch = useDispatch();
 
     const [movieData, setmovieData] = useState([]);
+    console.log("I am trying reset cmd on git");
+
 
     // const movieId = useSelector((state) => state?.appMovie?.selectedMovieId);
     // const cityId = useSelector((state) => state?.appLogin?.city?.cityId);
